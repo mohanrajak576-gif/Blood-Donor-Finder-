@@ -1,0 +1,121 @@
+   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donor Finder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🩸 Blood Donor Finder</h1>
+        <p>Connecting people. Saving lives.</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#register">Register</a>
+        <a href="#search">Find Donors</a>
+        <a href="#request">Blood Request</a>
+    </nav>
+
+    <section id="home" class="hero">
+        <h2>Be Someone's Lifeline</h2>
+        <p>Find blood donors and help people in need.</p>
+        <a href="#search" class="btn">Find a Donor</a>
+    </section>
+
+    <section id="register" class="container">
+        <h2>Become a Donor</h2>
+
+        <form id="donorForm">
+            <input type="text" id="donorName"
+                placeholder="Your Name" required>
+
+            <select id="donorBlood" required>
+                <option value="">Select Blood Group</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+
+            <input type="text" id="donorCity"
+                placeholder="Your Location" required>
+
+            <button type="submit">Register as Donor</button>
+        </form>
+
+        <p id="registerMessage"></p>
+    </section>
+
+    <section id="search" class="container">
+        <h2>Find Blood Donors</h2>
+
+        <select id="searchBlood">
+            <option value="">Choose Blood Group</option>
+            <option>A+</option>
+            <option>A-</option>
+            <option>B+</option>
+            <option>B-</option>
+            <option>AB+</option>
+            <option>AB-</option>
+            <option>O+</option>
+            <option>O-</option>
+        </select>
+
+        <input type="text" id="searchCity"
+            placeholder="Enter Location">
+
+        <button onclick="findDonors()">Search Donors</button>
+
+        <div id="donorResults"></div>
+    </section>
+
+    <section id="request" class="container">
+        <h2>Request Blood</h2>
+
+        <form id="requestForm">
+            <input type="text" id="patientName"
+                placeholder="Patient Name" required>
+
+            <select id="requestBlood" required>
+                <option value="">Required Blood Group</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+
+            <input type="text" id="hospital"
+                placeholder="Hospital / Location" required>
+
+            <button type="submit">Submit Request</button>
+        </form>
+
+        <div id="requestResults"></div>
+    </section>
+
+    <footer>
+        <p>Blood Donor Finder | Hackathon Project</p>
+        <p>Demo version using sample data</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+ 
+
+        
